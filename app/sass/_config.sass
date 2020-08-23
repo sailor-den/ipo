@@ -1,0 +1,121 @@
+// USER VARIABLES SECTION
+
+$accent: orange // Accent Color
+$fontsize: 14px // Body Font Size
+$textcolor: #333 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$roboto: Roboto, sans-serif // Roboto Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+@mixin font($fname, $fstyle, $fweight, $furl, $furl_2)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		// font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff'), url($furl_2) format('woff2')
+		    
+
+// @include font('Roboto', normal, 700, '../fonts/Roboto-Bold.woff', '../fonts/Roboto-Bold.woff2')
+// @include font('Roboto', italic, 700, '../fonts/Roboto-BoldItalic.woff', '../fonts/Roboto-BoldItalic.woff2')
+// @include font('Roboto', italic, 400, '../fonts/Roboto-Italic.woff', '../fonts/Roboto-Italic.woff2')
+@include font('Roboto', normal, 400, '../fonts/Roboto/Roboto-Regular.woff', '../fonts/Roboto/Roboto-Regular.woff2')
+
+@include font('GothamPro', normal, 400, '../fonts/GothamPro/GothamPro-Regular.woff', '../fonts/GothamPro/GothamPro-Regular.woff2')
+@include font('GothamPro', normal, 700, '../fonts/GothamPro/GothamPro-Black.woff', '../fonts/GothamPro/GothamPro-Black.woff2')
+
+// For example mixin font
+
+@mixin bold 
+	font-family: Roboto, sans-serif
+	font-weight: bold
+	font-size: 25px
+
+@mixin Play-b 
+	font-family: Play, sans-serif
+	font-weight: bold
+
+
+// GENERAL DOCUMENT STYLES
+
+*
+	box-sizing: border-box
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+html 
+    height: 100%
+
+body
+	height: 100%
+	font-family: GothamPro, sans-serif
+	font-size: $fontsize
+	font-weight: 400
+	min-width: 320px
+	position: relative
+	line-height: 1.42
+	overflow-x: hidden
+	color: #ffffff
+
+img 
+	display: block
+	max-width: 100%
+	height: auto 
+
+ul 
+	margin: 0
+	padding: 0
+	list-style: none
+
+p 
+    margin: 0
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 
+	font-weight: 300
+	margin: 0
+	padding: 0
+
+.container	
+    max-width: 1230px
+    margin: 0 auto 
+    padding: 0 20px

@@ -44,7 +44,7 @@
 					</div>
 					<div class="page__right form">
 						<h2 class="form__title">Заявка на обучение</h2>
-						<form action="" class="form__body">
+						<form action="https://formspree.io/mpzyekgp" method="POST" class="form__body">
 							<div class="form__group">
 								<label for="input-name" class="form__label">Ф. И. О.*</label>
 								<input type="text" class="form__input" name="input-name" id="input-name">
@@ -56,6 +56,8 @@
 							<div class="form__group">
 								<label for="input-phone" class="form__label">Телефон:</label>
 								<input type="tel" class="form__input" name="input-phone" id="input-phone">
+								<input id="device" type="hidden" name="device" value="">
+								<input id="ip" type="hidden" name="ip" value="">
 							</div>
 							<div class="form__group">
 								<input type="submit" value="Оставить заявку" class="form__button">

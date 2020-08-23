@@ -443,6 +443,8 @@ h6 {
 .form__input {
   height: 44px;
   padding: 5px; }
+  .form__input:focus {
+    outline: 1px solid black; }
 
 .form__button {
   height: 44px;

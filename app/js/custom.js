@@ -1,14 +1,17 @@
-$(document).ready(function($) {
-	$('.catalog__menu .menu__item').click(function(e) {
-		e.preventDefault();
+$(document).ready(function () {
+	
+	let user = window.navigator.userAgent;	
+	document.getElementById('device').value = user;
+	console.log(user)
 
-        category = $(this).data('group'),
-        prevCategory = $('.catalog__menu .menu__item.menu__item_active'),
-        prevCategoryId = $('.catalog__menu .menu__item.menu__item_active').data('group');
+	
+	let user_ip;
+	fetch('https://api.sypexgeo.net/')
+		.then((data) => data.json())
+		.then((data) => {
+			user_ip = data.ip;
+			document.getElementById('ip').value = user_ip;
+		});
 
-		prevCategory.removeClass('menu__item_active');
-		$('.catalog__menu .menu__item[data-group='+category+']').addClass('menu__item_active');
-		$('#group_'+prevCategoryId).css('display', 'none');
-		$('#group_'+category).css('display', 'flex');
-	});
+
 });

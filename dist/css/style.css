@@ -468,12 +468,8 @@ h6 {
     font-size: 20px;
     margin-bottom: 10px; }
     .bottom-page__item::before {
-      content: '';
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      border-radius: 50px;
-      background-color: red;
+      content: '\2022';
+      color: red;
       margin-right: 15px; }
 
 .footer {
@@ -523,3 +519,54 @@ h6 {
     font-size: 30px;
     color: #b32734;
     margin: 0px 15px 0px 0px; }
+
+@media only screen and (max-width: 1119px) {
+  .page__title {
+    font-size: 50px; }
+  .sale-price__subtitle {
+    font-size: 16px; }
+  .block-price__subtitle {
+    font-size: 35px; } }
+
+@media only screen and (max-width: 1072px) {
+  .sale-price__title {
+    font-size: 35px; } }
+
+@media only screen and (max-width: 998px) {
+  .page__left, .page__right {
+    min-height: 1016px; } }
+
+@media only screen and (max-width: 968px) {
+  .sale-price__title {
+    font-size: 30px; } }
+
+@media only screen and (max-width: 830px) {
+  .page__row {
+    flex-wrap: wrap;
+    justify-content: center; }
+  .page__left {
+    margin-bottom: 15px; }
+  .page__left, .page__right {
+    flex-basis: 90%; }
+  .bottom-page__item {
+    font-size: 15px; }
+  .footer__top {
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+  .footer__column {
+    flex-basis: 70%;
+    margin-bottom: 15px; } }
+
+@media only screen and (max-width: 570px) {
+  .sale-price__title {
+    font-size: 25px; } }
+
+@media only screen and (max-width: 450px) {
+  .page__title {
+    font-size: 25px;
+    text-align: center; }
+  .page__left, .page__right {
+    padding: 15px;
+    display: block; }
+  .page__bottom {
+    padding: 15px; } }

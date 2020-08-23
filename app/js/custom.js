@@ -11,7 +11,10 @@ $(document).ready(function () {
 		.then((data) => {
 			user_ip = data.ip;
 			document.getElementById('ip').value = user_ip;
+			console.log(user_ip)
 		});
+
+		
 
 
 });

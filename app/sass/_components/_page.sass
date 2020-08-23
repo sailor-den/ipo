@@ -15,17 +15,19 @@
         background: rgba(36, 36, 36, 0.86)
     
 .page
+    padding: 96px 0px
     &__title
         font-family: GothamPro, sans-serif
         font-size: 55px
         font-weight: 700
         color: #ffffff
         text-transform: uppercase
-        padding: 96px 0px 50px 0px
+        padding: 0px 0px 50px 0px
     &__row
         display: flex
         align-items: center
         justify-content: space-between
+        margin: 0px 0px 20px 0px
     &__left, &__right
         flex-basis: 49%
         min-height: 820px
@@ -87,7 +89,7 @@
     &__group
         display: flex
         flex-direction: column
-        margin: 0px 0px 23px 0px
+        margin: 0px 0px 40px 0px
         &_agree
             display: flex
             flex-direction: row
@@ -110,3 +112,27 @@
     &__agree
         position: relative
         top: 2px
+
+.bottom
+    &-page
+        border: 1px solid #ffffff
+        padding: 40px 100px
+        &__title
+            font-weight: bold
+            margin: 0px 0px 10px 0px
+        &__list
+        &__item
+            display: flex
+            align-items: center
+            font-size: 20px
+            margin-bottom: 10px
+            &::before
+                content: ''
+                display: inline-block
+                width: 7px
+                height: 7px
+                border-radius: 50px
+                background-color: red
+                margin-right: 15px
+                
+

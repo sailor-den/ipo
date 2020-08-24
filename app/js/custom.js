@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	
 	let user = window.navigator.userAgent;	
-	document.getElementById('device').value = user;
+	document.getElementById('user').value = user;
 	console.log(user)
 
 	
